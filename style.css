@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+:root {
+    --primary-soft-blue: hsl(215, 51%, 70%);
+    --primary-cyan: hsl(178, 100%, 50%);
+    --neutral-main-bg-blue: hsl(217, 54%, 11%);
+    --neutral-card-bg-blue: hsl(216, 50%, 16%);
+    --neutral-line-blue: hsl(215, 32%, 27%);
+    --neutral-white: hsl(0, 0%, 100%);
+
+    --font-family: Outfit, serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Outfit", "serif";
+}
+
+body {
+    background-color: var(--neutral-main-bg-blue);
+}
+p{
+    font-size: 18px;
+    color: var(--primary-soft-blue);
+}
+.card h2 {
+    color: var(--neutral-white);
+    margin-top: 2rem;
+    font-weight: 600;
+}
+.ether p {
+    color: var(--primary-cyan);
+    font-weight: 600 ;
+}
+.ether, .days, .author {
+    display: flex;
+}
+
+.card {
+    width: 330px;
+    margin-inline: auto;
+    background-color: var(--neutral-card-bg-blue);
+    padding: 1.5rem;
+    margin-top: 100px;
+}
+.image {
+   max-width: 100%;
+   position: relative;
+}
+.images {
+    position: relative;
+}
+
+.cost {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.author {
+    align-items: center;
+}
+.author img {
+    width: 40px;
+}
+.card .desc, .line, .author  {
+    margin-top: 2rem;
+}
+.ether p, .days p, .author p {
+    margin-left: 10px;
+}
+.card, .card img {
+    border-radius: 10px;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: var(--neutral-line-blue);
+}
+
+.author span {
+    color: var(--neutral-white);
+}
+
+.days p {
+    font-weight: 300;
+}
+.desc {
+    font-weight: 300;
+}
+.view {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    visibility: hidden;
+}
+
+.card h2:hover, .author span:hover {
+    color: var(--primary-cyan);
+    cursor: pointer;
+}
+
+.card img:hover {
+    filter: opacity(0.7) drop-shadow(0 0 0 var(--primary-cyan));
+    cursor: pointer;
+
+}
+.card img:hover + .view {
+    visibility: visible;
+}
+
+
+.attribution p {
+    color: var(--neutral-white);
+}
